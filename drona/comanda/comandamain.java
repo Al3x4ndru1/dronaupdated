@@ -2,10 +2,8 @@ package drona.comanda;
 
 public class comandamain {
 	
+public comandamain(){
+	new numaralimente();
 
-	public static void main(String[] args)
-	{
-		new numaralimente();
-	
-	}
+}
 }

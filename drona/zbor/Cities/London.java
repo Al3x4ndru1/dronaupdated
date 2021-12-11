@@ -1,26 +1,33 @@
 package drona.zbor.Cities;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
-public class London {
+public class London extends JComponent {
+    BufferedImage london=null;
+    File londra=new File("/home/al3x4ndru1/drona");
     public London(){
-        main();
+try {
+    this.london = ImageIO.read(londra);
+    if(london==null){
+        throw new IOException();
+    }
+}
+catch (IOException e){
+    JOptionPane.showMessageDialog(null,"The map can not be load it");
+}
     }
 
-    public static void main(){
-        JFrame F = new JFrame("Londom map right now");
-        JPanel p =new JPanel();
-        JLabel img;
-        ImageIcon Lonmap = new ImageIcon("Londom-Map.png");
-        F.setSize(450,450);
-        F.setLocation(400,400);
-        img = new JLabel("",Lonmap,JLabel.CENTER);
-        img.setBounds(0, 0, 450, 450);
-        F.add(img);
-        F.setVisible(true);
+    @Override
+    public void paintComponents(Graphics g) {
+        super.paintComponents(g);
+        g.create();
+        int margin=1;
+        g.drawImage(this.london,margin,margin,this.london.getWidth(),this.london.getHeight(),this);
 
     }
 }

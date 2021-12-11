@@ -28,8 +28,6 @@ import java.util.Scanner;
 																{	
 
 																	System.out.println(this.ID + " , " + this.nume + " , " + this.numar);
-																
-																	
 																	return 0;
 																}
 																
@@ -43,10 +41,8 @@ import java.util.Scanner;
 																	else{
 																		return 0;
 																	}
-																	
 
 																}
-
 
 																public int comanda(int ID)
 																{
@@ -114,7 +110,6 @@ while(thewhile==true){
 			reumplereautomata[i]=arr[i].realimentarezi();
 			System.out.println(reumplereautomata[i] + '\n');
 		}
-		
 		day=day1;
 		System.out.println("Do you want to order all?");
 		String a;
@@ -127,7 +122,6 @@ while(thewhile==true){
 
 				arr[i].reumplere(numare);
 			}
-
 		}
 	}
 	
@@ -140,7 +134,6 @@ while(thewhile==true){
 										System.out.println(reumplereautomata[i] + '\n');
 									}
 									break;
-
 
 		case "adaugarenoi": 
 			System.out.println("Introduceti cate produse noi doriti sa introduceti: ");
@@ -155,7 +148,6 @@ while(thewhile==true){
 			}
 			n=n+b-1;
 			break;
-
 
 		case "reumplere":	int re=RandomID(n); 
 							for(int i=0;i<n;i++)
@@ -189,7 +181,6 @@ while(thewhile==true){
 							System.out.println("Do you want to continue?");
 				
 							break;
-		
 
 		case "stop" : 	thewhile=false;
 							break;
